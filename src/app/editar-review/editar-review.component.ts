@@ -24,6 +24,8 @@ export class EditarReviewComponent {
       this.datosAActualizar(+this.reviewId)
     }
 
+    this.modificarHijo()
+
   }
 
   @ViewChild(HeaderComponent) hijo!: HeaderComponent;
@@ -69,6 +71,7 @@ export class EditarReviewComponent {
     if (this.reviewId != null) {
       this.datosAActualizar(+this.reviewId)
     }
+    this.modificarHijo()
   }
 
   listadoReviews: any[] = [];
