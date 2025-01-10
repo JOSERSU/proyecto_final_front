@@ -1,0 +1,23 @@
+<div class="d-flex justify-content-center align-items-center vh-100">
+    <div class="card mx-auto" style="width: 25rem;">
+        <h1 class="display-6 card-header text-center">Proyecto Final</h1>
+        <div class="card-body">
+            <div class="container text-center">
+                <form [formGroup]="loginForm">
+                    <div class="mb-3 mx-auto" style="max-width: 350px;">
+                        <input type="text" class="form-control text-center" placeholder="Usuario"
+                            formControlName="username">
+                    </div>
+                    <div class="col-auto mx-auto" style="max-width: 3500px;">
+                        <input type="password" class="form-control text-center" placeholder="Clave"
+                            formControlName="password">
+                    </div>
+                    <br>
+                    <button (click)="onLogin()" class="btn btn-primary" [disabled]="!loginForm.valid">Iniciar
+                        Sesión</button>
+                </form>
+                <div *ngIf="errorMessage" class="text-danger mt-3">{{ errorMessage }}</div>
+            </div>
+        </div>
+    </div>
+</div>

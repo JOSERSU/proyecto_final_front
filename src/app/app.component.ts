@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { ReviewsListComponent } from "./reviews-list/reviews-list.component";
+import { LoginComponent } from "./login/login.component";
 
 @Component({
   selector: 'app-root',

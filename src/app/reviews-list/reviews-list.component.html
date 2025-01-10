@@ -1,0 +1,36 @@
+<app-header></app-header>
+<div class="container text-center">
+    <h1>Listado de Reviews</h1>
+    <div class="d-flex justify-content-end">
+        <a href="/NuevaReview" class="btn btn-success ">Agregar Review</a>
+    </div>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th scope="col">ID del Review</th>
+                <th scope="col">ID del producto</th>
+                <th scope="col">Review</th>
+                <th scope="col">Rating</th>
+                <th scope="col">Fecha</th>
+                <th scope="col" style="text-align: center;">Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            @for (review of listadoReviews; track review.id) {
+            <tr>
+                <td scope="row" style="vertical-align: middle">{{ review.id }}</td>
+                <td style="vertical-align: middle">{{ review.product_id }}</td>
+                <td style="vertical-align: middle">{{ review.review_text }}</td>
+                <td style="vertical-align: middle">{{ review.rating }}</td>
+                <td style="vertical-align: middle">{{ review.review_date }}</td>
+                <td style="text-align: center;">
+
+                    <a [routerLink]="['/EditarReview']" [queryParams]="{ id: review.id }" style="margin: 20px;"
+                        class="btn btn-primary">Actualizar</a>&nbsp;
+                    <button (click)="EliminarReview(review.id)" type="button" class="btn btn-danger">Eliminar</button>
+                </td>
+            </tr>
+            }
+        </tbody>
+    </table>
+</div>
