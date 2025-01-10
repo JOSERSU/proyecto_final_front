@@ -24,8 +24,6 @@ export class EditarReviewComponent {
       this.datosAActualizar(+this.reviewId)
     }
 
-    this.modificarHijo()
-
   }
 
   @ViewChild(HeaderComponent) hijo!: HeaderComponent;
@@ -71,7 +69,6 @@ export class EditarReviewComponent {
     if (this.reviewId != null) {
       this.datosAActualizar(+this.reviewId)
     }
-    this.modificarHijo()
   }
 
   listadoReviews: any[] = [];
@@ -101,6 +98,7 @@ export class EditarReviewComponent {
 
   // Método para actualizar un héroe
   ActualizarReview() {
+    this.modificarHijo()
     if (this.product_id_review === 0 || this.review_text_review === '' || this.rating_review === 0 || this.review_date_review === '' || this.user === '') {
       alert("Por favor, ingrese todos los campos.");
       return;
