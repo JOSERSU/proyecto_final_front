@@ -10,7 +10,7 @@ import { Review, Reviews } from '../data/reviews';
 export class ReviewsServiceService {
 
 
-  urlApi = "http://localhost:8080/api/v1/reviews"
+  urlApi = "https://web-exa-ii.onrender.com/api/v1/reviews"
   private username = "admin"; // Reemplaza con tu usuario
   private password = "admin1234"; // Reemplaza con tu contraseña
 
